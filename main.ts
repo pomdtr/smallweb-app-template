@@ -1,7 +1,8 @@
-import { App } from "./pkg/mod.ts";
-
-const app = new App({
-    name: "pomdtr"
-});
-
-export default app;
+export default {
+    fetch: (_req: Request) => {
+        return new Response("Hello from smallweb!")
+    },
+    run: (_args: string[]) => {
+        console.log("Hello from smallweb!")
+    }
+}
